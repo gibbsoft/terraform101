@@ -1,0 +1,6 @@
+*.tf text eol=lf
+*.tpl text eol=lf
+*.j2 text eol=lf
+*.md text eol=lf
+*.py text eol=lf
+*.txt text eol=lf

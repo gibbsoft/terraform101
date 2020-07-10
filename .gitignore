@@ -1,0 +1,11 @@
+.vagrant/
+**/.DS_Store
+venv/
+**/.terraform/
+.terraform/
+**/.terraform*
+**/terraform.tfstate*
+**/*.backup
+.project
+**/*.swp
+step2/cert.html
