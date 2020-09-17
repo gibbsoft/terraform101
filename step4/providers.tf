@@ -17,7 +17,6 @@
 # along with terraform101 workshop.  If not, see <https://www.gnu.org/licenses/>.
 
 provider aws {
-  version     = "~> 2.68"
   max_retries = "10"
   region      = var.region
 }

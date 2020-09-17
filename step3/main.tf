@@ -21,6 +21,6 @@ module "terraform_state_backend" {
   stage                       = var.account_name
   name                        = "terraform"
   attributes                  = ["state"]
-  region                      = var.region
+  # region                      = var.region
   prevent_unencrypted_uploads = true
 }

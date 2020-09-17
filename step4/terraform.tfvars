@@ -16,30 +16,8 @@
 # You should have received a copy of the GNU General Public License
 # along with terraform101 workshop.  If not, see <https://www.gnu.org/licenses/>.
 
-variable "region" {
-  type        = string
-  description = "AWS Region"
-  default     = "eu-west-2"
-}
-
-variable "account_name" {
-  type        = string
-  description = "AWS Acccount Name, globally unique"
-}
-
-variable "env" {
-  type        = string
-  description = "Name for this instance of the environment"
-  default     = "dev"
-}
-
-variable "fullname" {
-  type        = string
-  description = "Your full name"
-}
-
-variable "project" {
-  type        = string
-  description = "Project for award"
-  default     = "Step4"
-}
+# Configure Terraform backend
+#
+account_name = "gsldev"
+fullname     = "William Gibbs"
+region       = "eu-west-2"

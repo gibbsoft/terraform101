@@ -17,5 +17,5 @@
 # along with terraform101 workshop.  If not, see <https://www.gnu.org/licenses/>.
 
 output "msg" {
-  value = "Hello World!"
+  value = "Hello World 3"
 }
