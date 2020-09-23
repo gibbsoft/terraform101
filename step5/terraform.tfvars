@@ -16,10 +16,8 @@
 # You should have received a copy of the GNU General Public License
 # along with terraform101 workshop.  If not, see <https://www.gnu.org/licenses/>.
 
-module "terraform_state_backend" {
-  source                      = "git::https://github.com/cloudposse/terraform-aws-tfstate-backend.git?ref=master"
-  stage                       = var.account_name
-  name                        = "terraform"
-  attributes                  = ["state"]
-  prevent_unencrypted_uploads = true
-}
+# Configure Terraform backend
+#
+account_name = "gsldev"
+fullname     = "William Gibbs"
+region       = "eu-west-2"

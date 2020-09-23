@@ -19,9 +19,5 @@
 # Configure Terraform backend
 #
 account_name   = "<Your account name goes here>"
-bucket         = "<Your account name goes here>-terraform-state"
-key            = "step4/terraform.tfstate"
-dynamodb_table = "<Your account name goes here>-terraform-state-lock"
-region         = "eu-west-2"
-encrypt        = true
 fullname       = "Your name goes here"
+region         = "eu-west-2"

@@ -4,6 +4,20 @@
 
 Amazon have a service called 's3', which stands for Simple Storage Services.  They provide 'buckets' that can store basically anything you want.  By default, s3 buckets are private, but it's possible to configure a policy to enable buckets to serve their contents as a web site.  The advantage of this is that there are no servers for us to have to maintain, and it's cheaper than running servers.  Terraform will output the URL of the web site for you to visit at the end of the apply.
 
+## Make your backend.tfvars
+
+Copy the example backend tfvars file then customise it to suite your environment
+
+    cd step4
+    cp backend.tfvars.example backend.tfvars
+    nano backend.tfvars
+
+## Terraform init
+
+Tell terraform to go and register any included providers and modules.  **Note that we have to include an option to use our `terraform.tfvars` file to feed our backend-config.  We only have to do this with `init`, other terraform operations pick-up the file automatically**:
+
+    AWS_PROFILE=<your account name> terraform init -backend-config=terraform.tfvars
+
 ## Make your terraform.tfvars
 
 Copy the example tfvars file then customise it to suite your environment
@@ -11,12 +25,6 @@ Copy the example tfvars file then customise it to suite your environment
     cd step4
     cp terraform.tfvars.example terraform.tfvars
     nano terraform.tfvars
-
-## Terraform init
-
-Tell terraform to go and register any included providers and modules.  **Note that we have to include an option to use our `terraform.tfvars` file to feed our backend-config.  We only have to do this with `init`, other terraform operations pick-up the file automatically**:
-
-    AWS_PROFILE=<your account name> terraform init -backend-config=terraform.tfvars
 
 ## Terraform plan
 
@@ -55,7 +63,6 @@ Satisfied that the plan looks reasonable?  Again, we proceed to the apply:
 ## Prepare for the next step
 
     cd ..
-    git checkout step5
 
 Head over to `step5/step5.md`
 

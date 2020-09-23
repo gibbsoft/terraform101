@@ -27,27 +27,6 @@ variable "account_name" {
   description = "AWS Acccount Name, globally unique"
 }
 
-variable "bucket" {
-  type        = string
-  description = "AWS s3 state bucket"
-}
-
-variable "key" {
-  type        = string
-  description = "Terraform state file"
-}
-
-variable "encrypt" {
-  type        = bool
-  description = "AWS s3 state bucket encryption"
-  default     = true
-}
-
-variable "dynamodb_table" {
-  type        = string
-  description = "AWS s3 state bucket encryption"
-}
-
 variable "env" {
   type        = string
   description = "Name for this instance of the environment"

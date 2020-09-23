@@ -16,7 +16,6 @@ Terraform has returned the outputs of the 'module', a single variable 'msg' with
 ## Prepare for the next step
 
     cd ..
-    git checkout step2
 
 Head over to `step2/step2.md`
 
