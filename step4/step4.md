@@ -6,7 +6,7 @@ Amazon have a service called 's3', which stands for Simple Storage Services.  Th
 
 ## Make your backend.tfvars
 
-Copy the example tfvars file then customise it to suite your environment
+Copy the example backend tfvars file then customise it to suite your environment
 
     cd step4
     cp backend.tfvars.example backend.tfvars
@@ -63,7 +63,6 @@ Satisfied that the plan looks reasonable?  Again, we proceed to the apply:
 ## Prepare for the next step
 
     cd ..
-    git checkout step5
 
 Head over to `step5/step5.md`
 

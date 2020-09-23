@@ -18,7 +18,7 @@ Technically experienced people who just haven't gotten around to looking at Terr
 
 ## Version
 
-Developed on terraform 0.12.26, although the code _should_ be compatible with later version 0.12.x releases.
+Developed on terraform 0.13.2, although the code _should_ be compatible with later versions.
 
 ## License
 
@@ -55,10 +55,5 @@ To start with more or less nothing but this readme file and see how the project 
 3. Examine the files in the directory using your favourite text editor. Personally, I prefer [vscode](https://code.visualstudio.com/) these days, although `vi` and `nano` are often pre-installed on *nix platforms.
 
 ## So what now?
-
-The git repo has a series of tags which you can checkout to see how the code takes shape from nothing.  If you completed the 'Where to start?' section above, then right now you're at _step0_.  Start by examining the boilerplate code in this repo, and when your happy that there's nothing special here, try:
-
-    git tag -ln1
-    git checkout step1
 
 Then head over to the step1 directory and start with the `step1.md` file.

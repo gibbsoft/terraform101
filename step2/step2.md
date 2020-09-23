@@ -145,7 +145,6 @@ https://www.terraform.io/docs/providers/index.html
 ## Prepare for the next step
 
     cd ..
-    git checkout step3
 
 Head over to `step3/step3.md`
 

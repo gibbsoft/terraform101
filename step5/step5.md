@@ -32,6 +32,20 @@ In main.tf take a look at the `aws_instance` resource:
 
 :pencil: For more info on `aws_resource` see the [official docs](https://www.terraform.io/docs/providers/aws/r/instance.html)
 
+## Make your backend.tfvars
+
+Copy the example backend tfvars file then customise it to suite your environment
+
+    cd step5
+    cp backend.tfvars.example backend.tfvars
+    nano backend.tfvars
+
+## Terraform init
+
+Tell terraform to go and register any included providers and modules.  **Note that we have to include an option to use our `terraform.tfvars` file to feed our backend-config.  We only have to do this with `init`, other terraform operations pick-up the file automatically**:
+
+    AWS_PROFILE=<your account name> terraform init -backend-config=terraform.tfvars
+
 ## Make your terraform.tfvars
 
 Copy the example tfvars file then customise it to suite your environment
@@ -39,12 +53,6 @@ Copy the example tfvars file then customise it to suite your environment
     cd step5
     cp terraform.tfvars.example terraform.tfvars
     nano terraform.tfvars
-
-## Terraform init
-
-Tell terraform to go and register any included providers and modules.  **Note that we have to include an option to use our `terraform.tfvars` file to feed our backend-config.  We only have to do this with `init`, other terraform operations pick-up the file automatically**:
-
-    AWS_PROFILE=<your account name> terraform init -backend-config=terraform.tfvars
 
 ## Terraform plan
 
