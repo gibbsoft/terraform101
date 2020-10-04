@@ -64,7 +64,7 @@ Satisfied that the plan looks reasonable?  Again, we proceed to the apply:
 
     cd ..
 
-Head over to `step5/step5.md`
+Head over to [step5/README.md](/step5/README.md)
 
 ## License
 

@@ -56,4 +56,4 @@ To start with more or less nothing but this readme file and see how the project 
 
 ## So what now?
 
-Then head over to the step1 directory and start with the `step1.md` file.
+Then head over to the step1 directory and start with the [step1/README.md](step1/README.md) file.

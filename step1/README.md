@@ -17,7 +17,7 @@ Terraform has returned the outputs of the 'module', a single variable 'msg' with
 
     cd ..
 
-Head over to `step2/step2.md`
+Head over to [step2/README.md](/step2/README.md)
 
 ## License
 

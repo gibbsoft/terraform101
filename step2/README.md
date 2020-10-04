@@ -146,7 +146,7 @@ https://www.terraform.io/docs/providers/index.html
 
     cd ..
 
-Head over to `step3/step3.md`
+Head over to [step3/README.md](/step3/README.md)
 
 ## License
 

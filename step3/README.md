@@ -111,7 +111,7 @@ Satisfied that the plan looks reasonable?  We proceed to the apply:
     cd ..
     git checkout step4
 
-Head over to `step4/step4.md`
+Head over to [step4/README.md](/step4/README.md)
 
 ## License
 
