@@ -23,7 +23,7 @@ resource "aws_security_group" "example" {
 
   tags = {
     Name        = "${var.env}-sg-example"
-    Environment = "${var.env}"
+    Environment = var.env
   }
 }
 

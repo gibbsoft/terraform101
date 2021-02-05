@@ -17,7 +17,7 @@
 # along with terraform101 workshop.  If not, see <https://www.gnu.org/licenses/>.
 
 terraform {
-  required_version = "~> 0.13.2"
+  required_version = "~> 0.14"
 
   backend "s3" {}
 }

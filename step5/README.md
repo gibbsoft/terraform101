@@ -42,9 +42,9 @@ Copy the example backend tfvars file then customise it to suite your environment
 
 ## Terraform init
 
-Tell terraform to go and register any included providers and modules.  **Note that we have to include an option to use our `terraform.tfvars` file to feed our backend-config.  We only have to do this with `init`, other terraform operations pick-up the file automatically**:
+Tell terraform to go and register any included providers and modules.  **Note that we have to include an option to use our `backend.tfvars` file to feed our backend-config.  We only have to do this with `init`, other terraform operations pick-up the file automatically**:
 
-    AWS_PROFILE=<your account name> terraform init -backend-config=terraform.tfvars
+    AWS_PROFILE=<your account name> terraform init -backend-config=backend.tfvars
 
 ## Make your terraform.tfvars
 

@@ -16,6 +16,4 @@
 # You should have received a copy of the GNU General Public License
 # along with terraform101 workshop.  If not, see <https://www.gnu.org/licenses/>.
 
-provider local {
-  version = "~> 1.4"
-}
+provider "local" {}
