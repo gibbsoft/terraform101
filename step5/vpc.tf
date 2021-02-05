@@ -28,6 +28,6 @@ module "vpc" {
   private_subnets      = slice(local.subnets, 3, 6)
 
   tags = {
-    "env" = "${var.env}"
+    "env" = var.env
   }
 }
