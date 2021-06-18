@@ -18,7 +18,7 @@ Technically experienced people who just haven't gotten around to looking at Terr
 
 ## Version
 
-Developed on terraform 0.14.6, although the code _should_ be compatible with later versions.
+Verified with terraform 1.0.0, although the code _should_ be compatible with later versions.
 
 ## License
 

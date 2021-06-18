@@ -10,13 +10,6 @@ Hopefully this will ease you into the terraform language and capabilities withou
 
 This example takes a simple template file `templates/cert.html.templ` and interpolates a few variables and issuing you a personalised certificate in the file `cert.html`.
 
-Try this:
-
-    cd step2
-    terraform apply
-
-:question: Oh, so that failed!?!? wtf?
-
 ## The 'local_file' resource
 
 Mostly harmless.
@@ -29,6 +22,29 @@ Mostly harmless.
         }
 
 You'll find our use of this in `main.tf`.  For more info, see the [terraform docs](https://www.terraform.io/docs/providers/local/r/file.html)
+
+Try this:
+
+    cd step2
+    terraform apply
+
+:question: Oh, so that failed!?!? wtf?
+
+    │ Error: Could not load plugin
+    │
+    │
+    │ Plugin reinitialization required. Please run "terraform init".
+    │
+    │ Plugins are external binaries that Terraform uses to access and manipulate
+    │ resources. The configuration provided requires plugins which can't be located,
+    │ don't satisfy the version constraints, or are otherwise incompatible.
+    │
+    │ Terraform automatically discovers provider requirements from your
+    │ configuration, including providers used in child modules. To see the
+    │ requirements and constraints, run "terraform providers".
+    │
+    │ failed to instantiate provider "registry.terraform.io/hashicorp/local" to obtain schema: unknown provider
+    │ "registry.terraform.io/hashicorp/local"
 
 ## Terraform init
 

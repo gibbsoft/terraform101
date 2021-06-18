@@ -90,6 +90,13 @@ This time we're going to pass in another variable, so we can use it as a prefix 
 
 Argh! It failed, why?
 
+    │ Error: Module not installed
+    │
+    │   on main.tf line 19:
+    │   19: module "terraform_state_backend" {
+    │
+    │ This module is not yet installed. Run "terraform init" to install all modules required by this configuration.
+
 Oh yes, we forgot to do an init:
 
     AWS_PROFILE=<your account name> TF_VAR_account_name=<your account name> terraform init

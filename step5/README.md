@@ -68,7 +68,7 @@ Satisfied that the plan looks reasonable?  Again, we proceed to the apply:
 
 After terraform completes, it shouldn't be long before your web server is up and serving your tiny web site.  To jump onto the ec2 instance and check its system log you can run the following:
 
-    eval $(env AWS_PROFILE=<your account name> terraform output ssh_command)
+    eval $(env AWS_PROFILE=<your account name> terraform output -raw ssh_command)
     sudo tail -f /var/log/syslog
 
 All good?
