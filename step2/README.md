@@ -144,7 +144,7 @@ We're starting to feel a bit more like organising our terraform code now, so by 
 
 - `locals.tf` these variables are entirely internal to the module and are typically used to keep the rest of the code clean and avoid repetition.
 
-- `providers.tf` a place to list the required providers to get the module up and running.  Remember we need to run `terraform init` to install these.  It is also desirable to pin each provider to specific version to ensure that the behaviour of the module is repeatable across environments.
+- `providers.tf` a place to list the required providers to get the module up and running.  Remember we need to run `terraform init` to install these.  It is also desirable to pin each provider to specific version to ensure that the behaviour of the module is repeatable across environments.  In this example there's no need to define anything in the `providers.tf` since terraform 1.0.0 because there are no parameters to pass to the provider.  More sophisticated providers requiring parameters would go in here.
 
 - `outputs.tf` You can think of these as return values that the module will produce.  In this example there is nothing to consume them, so we're just one as a way to display output to the terminal... but in later examples a module may return something useful. ;)
 
