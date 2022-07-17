@@ -21,7 +21,7 @@ Mostly harmless.
             filename = "${path.module}/foo.bar"
         }
 
-You'll find our use of this in `main.tf`.  For more info, see the [terraform docs](https://www.terraform.io/docs/providers/local/r/file.html)
+You'll find our use of this in `main.tf`.  For more info, see the [terraform docs](https://registry.terraform.io/providers/hashicorp/local/latest/docs/resources/file)
 
 Try this:
 
