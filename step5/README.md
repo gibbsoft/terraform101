@@ -30,7 +30,7 @@ In main.tf take a look at the `aws_instance` resource:
 
     resource "aws_instance" "example-ec2-instance" {}
 
-:pencil: For more info on `aws_resource` see the [official docs](https://www.terraform.io/docs/providers/aws/r/instance.html)
+:pencil: For more info on `aws_resource` see the [official docs](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)
 
 ## Make your backend.tfvars
 
