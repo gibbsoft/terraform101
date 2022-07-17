@@ -95,7 +95,7 @@ In this step we created a cloud based webserver to host our certificate example,
 
 This step also concludes the terraform101 workshop. For further reading checkout the following resources:
 
-- [Terraform.io](terraform.io)
+- [Terraform.io](https://www.terraform.io/)
 - [Amazon AWS Products](https://aws.amazon.com/products/)
 
 ## Cleaning UP
