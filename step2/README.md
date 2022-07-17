@@ -148,7 +148,7 @@ We're starting to feel a bit more like organising our terraform code now, so by 
 
 - `outputs.tf` You can think of these as return values that the module will produce.  In this example there is nothing to consume them, so we're just one as a way to display output to the terminal... but in later examples a module may return something useful. ;)
 
-- `main.cf` might contain key the resources of the module, but that said, developers may create resources in any .tf files they like!  Notice that we are creating a resource of type `local_file`, the documentation for that resource-type can be found [here](https://www.terraform.io/docs/providers/local/r/file.html).  On the whole, terraform's documentation is pretty good.
+- `main.cf` might contain key the resources of the module, but that said, developers may create resources in any .tf files they like!  Notice that we are creating a resource of type `local_file`, the documentation for that resource-type can be found [here](https://registry.terraform.io/providers/hashicorp/local/latest/docs/resources/file).  On the whole, terraform's documentation is pretty good.
 
 - `terraform.tfvars` a location to define values for variables, which override any defaults in `variables.tf`.  In fact you can have multiple `.tfvars` files and specify which ones you'd like to include using the `-var-files=` parameter.  However, the specially named `terraform.tfvars` file is auto-included if found in the current directory.
 
