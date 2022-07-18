@@ -48,7 +48,7 @@ Try this:
 
 ## Terraform init
 
-That's because now that we're using terraform providers we first need to initialise the module with the following command, upon which terraform will download any providers that you have reference.  Take a look in `providers.tf` to satisfy your curiosity, then try:
+That's because now that we're using terraform providers we first need to initialise the module with the following command, upon which terraform will download any providers that you have referenced.  Take a look in `providers.tf` to satisfy your curiosity, then try:
 
     terraform init
 
@@ -58,7 +58,7 @@ You can see what has been downloaded by doing:
 
 ## Terraform plan
 
-Now that the module is initialised, instead of apply we should do a plan.  Always running a '**terraform plan**' first is not only good practice, **but one day might actually save your life**.  Run the following command and enter your name when prompted:
+Now that the module is initialised, instead of `apply` we should do a `plan`.  Always running a '**terraform plan**' first is not only good practice, **but one day might actually save your life**.  Run the following command and enter your name when prompted:
 
     terraform plan
 
@@ -138,7 +138,8 @@ We're starting to feel a bit more like organising our terraform code now, so by 
 | providers.tf     | Terraform providers                                                             |
 | outputs.tf       | Module outputs                                                                  |
 | main.tf          | Main part of the module                                                         |
-| terraform.tfvars | values for variables, an alternative location to var CLI parameters and envvars |
+| terraform.tfvars | Values for variables, an alternative location to var CLI parameters and envvars |
+| README.md        | This file!                                                                      |
 
 - `variables.tf` defines the parameters used by this module.  It makes it easier to adopt terraform modules when this file shows what is needed to be passed in to make it work.
 
@@ -151,6 +152,8 @@ We're starting to feel a bit more like organising our terraform code now, so by 
 - `main.cf` might contain the key resources of the module, but that said, developers may create resources in any .tf files they like!  Notice that we are creating a resource of type `local_file`, the documentation for that resource-type can be found [here](https://registry.terraform.io/providers/hashicorp/local/latest/docs/resources/file).  On the whole, terraform's documentation is pretty good.
 
 - `terraform.tfvars` a location to define values for variables, which override any defaults in `variables.tf`.  In fact you can have multiple `.tfvars` files and specify which ones you'd like to include using the `-var-files=` parameter.  However, the specially named `terraform.tfvars` file is auto-included if found in the current directory.
+
+- `README.md` Useful information on what the module does and how to use it.
 
 ## Other providers
 
