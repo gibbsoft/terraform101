@@ -71,7 +71,7 @@ Add a section in your `~/.aws/credentials` file using the value you find in the 
 
 What do these files do?  Well, I mentioned the terraform state file in step2 and I said that we would revisit it.  We need to keep our terraform state files for your AWS account safe and sound somewhere, so let's make that somewhere in AWS!  Also, to prevent terraform admins clashing with each other, terraform supports using a dynamodb database for locking.
 
-Rather than learning how to create an s3 bucket, dynamodb table and a bunch of required IAM policies now, we can instead leverage someone else's hard work by using a module from the [Terraform Registry](https://registry.terraform.io/).  There are modules on the registry to do many-a-common task.  It's work spending a few minutes browsing the library to get a feel for them.
+Rather than learning how to create an s3 bucket, dynamodb table and a bunch of required IAM policies now, we can instead leverage someone else's hard work by using a module from the [Terraform Registry](https://registry.terraform.io/).  There are modules on the registry to do many-a-common task.  It's worth spending a few minutes browsing the library to get a feel for them.
 
 Looking at `main.tf` you can see we're going to be pulling in [this module](https://registry.terraform.io/modules/cloudposse/tfstate-backend/aws/0.17.0) to do the heavy lifting.
 

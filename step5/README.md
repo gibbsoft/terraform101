@@ -30,7 +30,7 @@ In main.tf take a look at the `aws_instance` resource:
 
     resource "aws_instance" "example-ec2-instance" {}
 
-:pencil: For more info on `aws_resource` see the [official docs](https://www.terraform.io/docs/providers/aws/r/instance.html)
+:pencil: For more info on `aws_resource` see the [official docs](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)
 
 ## Make your backend.tfvars
 
@@ -95,7 +95,7 @@ In this step we created a cloud based webserver to host our certificate example,
 
 This step also concludes the terraform101 workshop. For further reading checkout the following resources:
 
-- [Terraform.io](terraform.io)
+- [Terraform.io](https://www.terraform.io/)
 - [Amazon AWS Products](https://aws.amazon.com/products/)
 
 ## Cleaning UP
