@@ -8,7 +8,7 @@ Hopefully this will ease you into the terraform language and capabilities withou
 
 ## A certificate for you
 
-This example takes a simple template file `templates/cert.html.templ` and interpolates a few variables and issuing you a personalised certificate in the file `cert.html`.
+This example takes a simple template file `templates/cert.html.templ` and interpolates a few variables and issues you a personalised certificate in the file `cert.html`.
 
 ## The 'local_file' resource
 
@@ -89,7 +89,7 @@ In the plan output above we can see by the `+` prefixes what things terraform ha
 
 After ensuring that you have carefully checked that the terraform plan is not going to entirely destroy all of your cloud infrastructure, then we are ready to run the apply.  Be sure to open the resulting `cert.html` file in a browser to see what it has created for you.
 
-:warning: You might need to scroll back through your terminal buffer to ensure you full appreciate the impact of the plan.
+:warning: You might need to scroll back through your terminal buffer to ensure you fully appreciate the impact of the plan.
 
     terraform apply
 
@@ -147,7 +147,7 @@ We're starting to feel a bit more like organising our terraform code now, so by 
 
 - `providers.tf` a place to list the required providers to get the module up and running.  Remember we need to run `terraform init` to install these.  It is also desirable to pin each provider to specific version to ensure that the behaviour of the module is repeatable across environments.  In this example there's no need to define anything in the `providers.tf` since terraform 1.0.0 because there are no parameters to pass to the provider.  More sophisticated providers requiring parameters would go in here.
 
-- `outputs.tf` You can think of these as return values that the module will produce.  In this example there is nothing to consume them, so we're just one as a way to display output to the terminal... but in later examples a module may return something useful. ;)
+- `outputs.tf` You can think of these as return values that the module will produce.  In this example there is nothing to consume them, so we're just using one as a way to display output to the terminal... but in later examples a module may return something useful. ;)
 
 - `main.cf` might contain the key resources of the module, but that said, developers may create resources in any .tf files they like!  Notice that we are creating a resource of type `local_file`, the documentation for that resource-type can be found [here](https://registry.terraform.io/providers/hashicorp/local/latest/docs/resources/file).  On the whole, terraform's documentation is pretty good.
 
@@ -157,7 +157,7 @@ We're starting to feel a bit more like organising our terraform code now, so by 
 
 ## Other providers
 
-There are is a steadily growing list of providers to manage resources on all sorts of platforms, it's worth taking 10 minutes to have a flick through some of them, along with examples of the resources each supports.
+There is a steadily growing list of providers to manage resources on all sorts of platforms, it's worth taking 10 minutes to have a flick through some of them, along with examples of the resources each supports.
 
 https://www.terraform.io/docs/providers/index.html
 
