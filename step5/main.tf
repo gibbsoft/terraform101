@@ -23,12 +23,13 @@ module "award" {
 }
 
 resource "aws_instance" "example-ec2-instance" {
-  ami                    = data.aws_ami.ubuntu-focal.id
-  instance_type          = "t3.micro"
-  key_name               = aws_key_pair.deployer.key_name
-  vpc_security_group_ids = [aws_security_group.example.id]
-  subnet_id              = element(module.vpc.public_subnets, 0)
-  user_data              = <<-EOF
+  ami                         = data.aws_ami.ubuntu-focal.id
+  instance_type               = "t3.micro"
+  key_name                    = aws_key_pair.deployer.key_name
+  vpc_security_group_ids      = [aws_security_group.example.id]
+  subnet_id                   = element(module.vpc.public_subnets, 0)
+  associate_public_ip_address = true
+  user_data                   = <<-EOF
   #!/bin/sh
   apt update
   apt upgrade -y
@@ -42,7 +43,7 @@ resource "aws_instance" "example-ec2-instance" {
   }
 
   tags = {
-    name        = "example-ec2-instance"
+    Name        = "example-ec2-instance"
     Terraform   = "true"
     Environment = "dev"
     Project     = var.project

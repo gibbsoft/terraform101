@@ -16,7 +16,10 @@
 # You should have received a copy of the GNU General Public License
 # along with terraform101 workshop.  If not, see <https://www.gnu.org/licenses/>.
 
-output "website_endpoint" {
-  description = "The public url of this website."
-  value       = "${aws_s3_bucket.static_site.bucket}.s3-website-${data.aws_region.current.name}.amazonaws.com"
-}
+# Configure Terraform backend
+#
+bucket         = "terraform101-terraform-state"
+key            = "step5/terraform.tfstate"
+dynamodb_table = "terraform101-terraform-state-lock"
+region         = "eu-west-2"
+encrypt        = true

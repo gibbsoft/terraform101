@@ -103,7 +103,7 @@ Oh yes, we forgot to do an init:
 
     AWS_PROFILE=<your account name> TF_VAR_account_name=<your account name> terraform plan
 
-Hopefully the plan returns: `Plan: 3 to add, 0 to change, 0 to destroy`
+Hopefully the plan returns: `Plan: 8 to add, 0 to change, 0 to destroy.`
 
 ## Terraform apply
 
@@ -116,7 +116,6 @@ Satisfied that the plan looks reasonable?  We proceed to the apply:
 ## Prepare for the next step
 
     cd ..
-    git checkout step4
 
 Head over to [step4/README.md](/step4/README.md)
 

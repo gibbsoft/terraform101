@@ -2,7 +2,7 @@
 
 ## Objective
 
-The aim of this repo is to take someone who has never used Terraform before on a tour of [Terraform CLI](https://www.terraform.io/docs/cli-index.html) basics.
+The aim of this repo is to take someone who has never used Terraform before on a tour of [Terraform CLI](https://www.terraform.io/docs/cli-index.html) basics.  Note that [OpenTofu](https://opentofu.org/) is an open-source fork of Terraform that is also gaining traction.  Whilst functionality of both may diverge over time, terraform 1.6.6 and tofu 1.6.2 are feature compatible.
 
 ## Audience
 
@@ -14,11 +14,12 @@ Technically experienced people who just haven't gotten around to looking at Terr
 - An Internet connection and an AWS subscription are required.
 - Git is also recommended to facilitate the progression through the 'steps', although not essential as everything is right there at the head of the master branch anyway.
 - A pre-created ssh keypair is required at the default name and location for step5.  You can create a one easily enough, it's documented widely, for example [here](https://git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key).
-- Optionally, pre-installation of Python and the module `awscli` could come in handy for step5.
+- Optionally, pre-installation of Python and the module `awscli` could come in handy for verification.
+- Follow the install instructions provided by Hashicorp or the OpenTofu community to install the cli tools for your platform.
 
 ## Version
 
-Verified with terraform 1.0.0, although the code _should_ be compatible with later versions.
+Verified with terraform 1.6.6 and tofu 1.6.2, although the code _should_ be compatible with later versions.
 
 ## License
 

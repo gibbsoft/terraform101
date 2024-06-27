@@ -30,21 +30,14 @@ Try this:
 
 :question: Oh, so that failed!?!? wtf?
 
-    │ Error: Could not load plugin
+    │ Error: Inconsistent dependency lock file
     │
+    │ The following dependency selections recorded in the lock file are inconsistent with the current configuration:
+    │   - provider registry.terraform.io/hashicorp/local: required by this configuration but no version is selected
     │
-    │ Plugin reinitialization required. Please run "terraform init".
-    │
-    │ Plugins are external binaries that Terraform uses to access and manipulate
-    │ resources. The configuration provided requires plugins which can't be located,
-    │ don't satisfy the version constraints, or are otherwise incompatible.
-    │
-    │ Terraform automatically discovers provider requirements from your
-    │ configuration, including providers used in child modules. To see the
-    │ requirements and constraints, run "terraform providers".
-    │
-    │ failed to instantiate provider "registry.terraform.io/hashicorp/local" to obtain schema: unknown provider
-    │ "registry.terraform.io/hashicorp/local"
+    │ To make the initial dependency selections that will initialize the dependency lock file, run:
+    │   terraform init
+    ╵
 
 ## Terraform init
 
@@ -64,23 +57,30 @@ Now that the module is initialised, instead of `apply` we should do a `plan`.  A
 
 Lets carefully examine the output of the plan:
 
-    An execution plan has been generated and is shown below.
-    Resource actions are indicated with the following symbols:
-      + create
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  + create
 
-    Terraform will perform the following actions:
+Terraform will perform the following actions:
 
-        # local_file.cert[0] will be created
-        + resource "local_file" "cert" {
-            + content              = (known after apply)
-            + directory_permission = "0777"
-            + file_permission      = "0777"
-            + filename             = "./cert.html"
-            + id                   = (known after apply)
-            }
+    # local_file.cert[0] will be created
+    + resource "local_file" "cert" {
+        + content_base64       = (known after apply)
+        + content_base64sha256 = (known after apply)
+        + content_base64sha512 = (known after apply)
+        + content_md5          = (known after apply)
+        + content_sha1         = (known after apply)
+        + content_sha256       = (known after apply)
+        + content_sha512       = (known after apply)
+        + directory_permission = "0777"
+        + file_permission      = "0777"
+        + filename             = "./cert.html"
+        + id                   = (known after apply)
+        }
 
     Plan: 1 to add, 0 to change, 0 to destroy.
 
+    Changes to Outputs:
+    + content_b64 = (known after apply)
     ------------------------------------------------------------------------
 
 In the plan output above we can see by the `+` prefixes what things terraform has noticed do not exist on your machine, and therefore it proposes to create them for you.  The last line is of some comfort to you as it can be seen from this that nothing will be changed or destroyed (yay!).   **ALWAYS READ THIS LAST LINE OF THE PLAN CAREFULLY BEFORE RUNNING AN APPLY**

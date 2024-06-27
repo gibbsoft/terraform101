@@ -18,14 +18,13 @@
 
 module "vpc" {
   source               = "terraform-aws-modules/vpc/aws"
-  version              = "v3.1.0"
+  version              = "5.8.1"
   create_vpc           = true
   name                 = var.env
   cidr                 = var.vpc_cidr
   azs                  = data.aws_availability_zones.available.names
   enable_dns_hostnames = true
-  public_subnets       = slice(local.subnets, 0, 3)
-  private_subnets      = slice(local.subnets, 3, 6)
+  public_subnets       = slice(local.subnets, 0, length(data.aws_availability_zones.available.names))
 
   tags = {
     "env" = var.env

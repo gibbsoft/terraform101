@@ -17,9 +17,10 @@
 # along with terraform101 workshop.  If not, see <https://www.gnu.org/licenses/>.
 
 module "terraform_state_backend" {
-  source                      = "git::https://github.com/cloudposse/terraform-aws-tfstate-backend.git?ref=master"
+  source                      = "git::https://github.com/cloudposse/terraform-aws-tfstate-backend.git?ref=main"
   stage                       = var.account_name
   name                        = "terraform"
   attributes                  = ["state"]
   prevent_unencrypted_uploads = true
+  force_destroy               = true
 }

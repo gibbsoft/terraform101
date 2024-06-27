@@ -3,7 +3,6 @@
 venv/
 **/.terraform/
 .terraform/
-**/.terraform*
 **/terraform.tfstate*
 **/*.backup
 .project

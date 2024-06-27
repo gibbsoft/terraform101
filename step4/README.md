@@ -22,7 +22,6 @@ Tell terraform to go and register any included providers and modules.  **Note th
 
 Copy the example tfvars file then customise it to suite your environment
 
-    cd step4
     cp terraform.tfvars.example terraform.tfvars
     nano terraform.tfvars
 
